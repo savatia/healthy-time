@@ -7,11 +7,10 @@
 }
 .mdl-layout__content {
 	padding: 24px;
-    padding-top:0;
+    padding-top:12px;
 	flex: none;
 }
 </style>
-<main class="mdl-layout__content">
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
       <a href="#login" class="mdl-tabs__tab is-active">Login</a>
@@ -77,5 +76,5 @@
   
 
 
-<main>
+
 <?php $this->load->view('includes/footer'); ?>
