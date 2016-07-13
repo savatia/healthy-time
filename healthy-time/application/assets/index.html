@@ -1,20 +1,16 @@
-<?php $this->load->view('includes/header'); ?>
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="vendor/css/material.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-
-
-
+    <title> <?= $title ?> </title>
+</head>
+<body>
 
 <style>
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
-}
-
-#image {
-  background-image:url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg');
-}
-
-.mdl-layout__content > .page_content {
-  background: url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg') center / cover !important;
 }
 </style>
 
@@ -46,7 +42,6 @@
         <a class="mdl-navigation__link" href="">Chat</a>
         <a class="mdl-navigation__link" href="">Health Facilities</a>
         <a class="mdl-navigation__link" href="">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="">FAQ</a>
       </nav>
     </div>
@@ -58,15 +53,18 @@
         <a class="mdl-navigation__link" href="">Chat</a>
         <a class="mdl-navigation__link" href="">Health Facilities</a>
         <a class="mdl-navigation__link" href="">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="">FAQ</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content" id="image">
+    <div class="page-content">
 
     </div>
   </main>
 </div>
 
-<?php $this->load->view('includes/footer'); ?>
+<script src="vendor/js/material.min.js" /> </script>
+<script src="vendor/js/jquery.min.js" /> </script>
+</body>
+
+</html>
