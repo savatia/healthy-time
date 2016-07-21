@@ -64,7 +64,7 @@
   </div>
   <main class="mdl-layout__content" id="main">
     <div class="page-content">
-
+        <?php $this->load->view('includes/chat_layout'); ?>
     </div>
   </main>
 

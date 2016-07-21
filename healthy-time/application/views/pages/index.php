@@ -64,7 +64,7 @@
   </div>
   <main class="mdl-layout__content" id="main">
     <div class="page-content">
-
+      <img src="">
     </div>
   </main>
 
