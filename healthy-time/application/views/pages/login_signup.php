@@ -71,7 +71,7 @@
 }
 </style>
 
- <h2>Welcome <?php echo $username; ?>!</h2>
+ <h2>Welcome <?php //echo $username; ?>!</h2>
    <a href="home/logout">Logout</a>
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -91,8 +91,8 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
-  <?php echo validation_errors(); ?>
-   <?php echo form_open('verifylogin'); ?>
+    <?php //echo validation_errors(); ?>
+    <?php echo form_open('verifylogin'); ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">

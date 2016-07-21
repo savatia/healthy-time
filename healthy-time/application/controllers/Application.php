@@ -12,6 +12,11 @@ class Application extends CI_Controller {
     }
 
     public function account() {
+        /* Load form helper */
+        $this->load->helper(array('form'));
+
+        /* Load form validation library */
+        $this->load->library('form_validation');
         $data['title'] = 'Login | Signup';
         $this->load->view('pages/login_signup', $data);
     }
@@ -26,6 +31,11 @@ class Application extends CI_Controller {
         $this->load->view('pages/chat', $data);
     }
       public function Login() {
+        /* Load form helper */
+        $this->load->helper(array('form'));
+
+        /* Load form validation library */
+        $this->load->library('form_validation');
         $data['title'] = 'Login';
         $this->load->view('pages/login', $data);
     }
