@@ -1,7 +1,1 @@
- # ignore objects and archives, anywhere in the tree.
-*.[oa]
-    $ cat Documentation/.gitignore
-    # ignore generated html files,
-    *.html
-    # except foo.html which is maintained by hand
-    !foo.html
+healthy-time/.idea/
