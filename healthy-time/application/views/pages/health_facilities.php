@@ -46,6 +46,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/indformation'; ?>"></a>
       </nav>
     </div>
   </header>
@@ -96,6 +97,7 @@
 </div>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+
 <script>
 var hospitalIcon = '<?php echo base_url() ?>application/assets/img/hospital.png';
 function createMarker(place) {
