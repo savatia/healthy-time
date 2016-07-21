@@ -1,6 +1,5 @@
 <?php $this->load->view('includes/header'); ?>
 
-
 <style>
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
@@ -72,13 +71,29 @@
 }
 </style>
 
+ <h2>Welcome <?php echo $username; ?>!</h2>
+   <a href="home/logout">Logout</a>
+
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
       <a href="#login" class="mdl-tabs__tab is-active">Login</a>
       <a href="#signup" class="mdl-tabs__tab">Signup</a>
   </div>
 
-  <?php //Login ?>
+		
+
+<h1>Customer Login</h1>
+Please enter your username and password to log into the websites. If you do not have an account, you can get one for free by <a href="register.php">registering</a>.
+<p>
+<?php
+if(isset($_GET['error'])) {
+echo "<strong>Incorrect username/password</strong>";
+}
+?>
+ <!--  // end test -->
+  <?php echo validation_errors(); ?>
+   <?php echo form_open('verifylogin'); ?>
+   
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
 	<main class="mdl-layout__content">
@@ -90,7 +105,7 @@
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
 						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">Username</label>
+						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
 						<input class="mdl-textfield__input" type="password" id="userpass" />
@@ -106,7 +121,9 @@
 </div>
   </div>
 
-  <?php //Signup ?>
+  <?php 
+
+  ?>
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
 	<main class="mdl-layout__content">
@@ -118,11 +135,15 @@
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
 						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">Username</label>
+						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
 						<input class="mdl-textfield__input" type="password" id="userpass" />
 						<label class="mdl-textfield__label" for="userpass">Password</label>
+					</div>
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" type="password" id="userpass" />
+						<label class="mdl-textfield__label" for="userpass">Confirm Password</label>
 					</div>
 				</form>
 			</div>
