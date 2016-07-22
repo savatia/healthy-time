@@ -42,7 +42,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
       </nav>
     </div>
@@ -54,7 +54,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
     </nav>
   </div>
@@ -71,7 +71,7 @@
 }
 </style>
 
- <h2>Welcome <?php echo $username; ?>!</h2>
+ <h2>Welcome <?php echo $this->login_model->uname; ?>!</h2>
    <a href="home/logout">Logout</a>
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -91,7 +91,7 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
-  <?php echo validation_errors(); ?>
+  <!-- <?php echo validation_errors(); ?> -->
    <?php echo form_open('verifylogin'); ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
@@ -122,7 +122,54 @@ echo "<strong>Incorrect username/password</strong>";
   </div>
 
   <?php 
+class User_model extends CI_Model {
+    public $status; 
+    public $roles;    
+    function __construct(){
+        // Call the Model constructor
+        parent::__construct();        
+        $this->status = $this->config->item('status');
+        $this->roles = $this->config->item('roles');
+    }
+} 
+?>
 
+<?php
+ function insertUser($d)
+    {  
+            $string = array(
+                'PhoneNumber'=>$d['PhoneNumber'],
+                'password'=>$d['password'],
+               
+                'role'=>$this->roles[0], 
+                'status'=>$this->status[0]
+            );
+            $q = $this->db->insert_string('users',$string);             
+            $this->db->query($q);
+            return $this->db->insert_id();
+    }
+    
+     function isDuplicate($email)
+    {     
+        $this->db->get_where('users', array('PhoneNumber' => $PhoneNumber), 1);
+        return $this->db->affected_rows() > 0 ? TRUE : FALSE;         
+    }
+    
+     function insertToken($user_id)
+    {   
+        $token = substr(sha1(rand()), 0, 30); 
+        $date = date('Y-m-d');
+        
+        $string = array(
+                'token'=> $token,
+                'user_id'=>$user_id,
+                'created'=>$date
+            );
+        $query = $this->db->insert_string('tokens',$string);
+        $this->db->query($query);
+        return $token;
+        
+    }
   ?>
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">

@@ -2,8 +2,9 @@
   <?php
   			//login
 
-Class User extends CI_Model
+Class Login_model extends CI_Model
 {
+	public $uname = "ecvans";
 	 function login($username, $password)
 	 {
 		   $this -> db -> select('id, username, password');
@@ -24,4 +25,4 @@ Class User extends CI_Model
 		   }
 	 }
 }
-?>
+?> 	

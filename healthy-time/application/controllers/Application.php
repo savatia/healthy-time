@@ -29,9 +29,16 @@ class Application extends CI_Controller {
         $data['title'] = 'Login';
         $this->load->view('pages/login', $data);
     }
-      public function Registration() {
+      public function Register() {
         $data['title'] = 'Register';
         $this->load->view('pages/Register', $data);
     }
-} 
+
+     public function verifylogin() {
+        $data['title'] = 'login';
+        $this->load->view('pages/Register', $data);
+    }
+
+}
+ 
 ?>
