@@ -1,5 +1,6 @@
 <?php $this->load->view('includes/header'); ?>
 
+
 <style>
 .demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
   padding-right: 0;
@@ -71,11 +72,8 @@
 }
 </style>
 
-<<<<<<< HEAD:healthy-time/application/views/pages/login.php
- <h2>Welcome <?php echo $this->login_model->uname; ?>!</h2>
-=======
+ <h2>Welcome!</h2>
  <h2>Welcome <?php //echo $username; ?>!</h2>
->>>>>>> 02069db5f51bbe2a36ba7363c21c3f379901fc8b:healthy-time/application/views/pages/login_signup.php
    <a href="home/logout">Logout</a>
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -95,13 +93,12 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
-<<<<<<< HEAD:healthy-time/application/views/pages/login.php
-  <!-- <?php echo validation_errors(); ?> -->
-   <?php echo form_open('verifylogin'); ?>
-=======
-    <?php //echo validation_errors(); ?>
-    <?php echo form_open('verifylogin'); ?>
->>>>>>> 02069db5f51bbe2a36ba7363c21c3f379901fc8b:healthy-time/application/views/pages/login_signup.php
+  <?php 
+  echo validation_errors(); 
+  ?>
+  <?php
+  echo form_open('application/login');
+  ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
@@ -113,12 +110,12 @@ echo "<strong>Incorrect username/password</strong>";
 	  	<div class="mdl-card__supporting-text">
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
+						<input class="mdl-textfield__input" type="text" id="phonenumer" name="phonenumber" />
+						<label class="mdl-textfield__label" for="phonenumber">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Password</label>
+						<input class="mdl-textfield__input" type="password" id="password" name="password" />
+						<label class="mdl-textfield__label" for="password">Password</label>
 					</div>
 				</form>
 			</div>
@@ -129,56 +126,11 @@ echo "<strong>Incorrect username/password</strong>";
 	</main>
 </div>
   </div>
-
-  <?php 
-class User_model extends CI_Model {
-    public $status; 
-    public $roles;    
-    function __construct(){
-        // Call the Model constructor
-        parent::__construct();        
-        $this->status = $this->config->item('status');
-        $this->roles = $this->config->item('roles');
-    }
-} 
-?>
-
-<?php
- function insertUser($d)
-    {  
-            $string = array(
-                'PhoneNumber'=>$d['PhoneNumber'],
-                'password'=>$d['password'],
-               
-                'role'=>$this->roles[0], 
-                'status'=>$this->status[0]
-            );
-            $q = $this->db->insert_string('users',$string);             
-            $this->db->query($q);
-            return $this->db->insert_id();
-    }
-    
-     function isDuplicate($email)
-    {     
-        $this->db->get_where('users', array('PhoneNumber' => $PhoneNumber), 1);
-        return $this->db->affected_rows() > 0 ? TRUE : FALSE;         
-    }
-    
-     function insertToken($user_id)
-    {   
-        $token = substr(sha1(rand()), 0, 30); 
-        $date = date('Y-m-d');
-        
-        $string = array(
-                'token'=> $token,
-                'user_id'=>$user_id,
-                'created'=>$date
-            );
-        $query = $this->db->insert_string('tokens',$string);
-        $this->db->query($query);
-        return $token;
-        
-    }
+  <?php
+    echo form_close();
+  ?>
+  <?php
+  echo form_open('application/register');
   ?>
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
@@ -190,16 +142,16 @@ class User_model extends CI_Model {
 	  	<div class="mdl-card__supporting-text">
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
+						<input class="mdl-textfield__input" type="text" id="phonenumber" name="phonenumber" />
+						<label class="mdl-textfield__label" for="phonenumber">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Password</label>
+						<input class="mdl-textfield__input" type="password" id="password" name="password" />
+						<label class="mdl-textfield__label" for="password">Password</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Confirm Password</label>
+						<input class="mdl-textfield__input" type="password" id="confirm_password" />
+						<label class="mdl-textfield__label" for="confirm_password">Confirm Password</label>
 					</div>
 				</form>
 			</div>
@@ -209,6 +161,10 @@ class User_model extends CI_Model {
 		</div>
 	</main>
 </div>
+  <?php
+    echo form_close();
+  ?>
+
   </main>
 
   <footer class="mdl-mini-footer">
