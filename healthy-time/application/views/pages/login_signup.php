@@ -91,8 +91,8 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
-    <?php //echo validation_errors(); ?>
-    <?php echo form_open('verifylogin'); ?>
+    <?php echo validation_errors(); ?>
+    <?php echo form_open('/application/verifylogin'); ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
@@ -104,12 +104,12 @@ echo "<strong>Incorrect username/password</strong>";
 	  	<div class="mdl-card__supporting-text">
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
+						<input class="mdl-textfield__input" type="text" id="phonenumber" name="phonenumber" />
+						<label class="mdl-textfield__label" for="phonenumber">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Password</label>
+						<input class="mdl-textfield__input" type="password" id="password" name="password" />
+						<label class="mdl-textfield__label" for="password">Password</label>
 					</div>
 				</form>
 			</div>
