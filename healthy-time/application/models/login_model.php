@@ -2,13 +2,14 @@
   <?php
   			//login
 
-Class User extends CI_Model
+Class Login_model extends CI_Model
 {
+	public $uname = "ecvans";
 	 function login($username, $password)
 	 {
-		   $this -> db -> select('id, phonenumber, password');
+		   $this -> db -> select('id, username, password');
 		   $this -> db -> from('users');
-		   $this -> db -> where('phonenumber', $username);
+		   $this -> db -> where('username', $username);
 		   $this -> db -> where('password', MD5($password));
 		   $this -> db -> limit(1);
 		 
@@ -25,3 +26,7 @@ Class User extends CI_Model
 	 }
 }
 ?> 	
+
+
+
+<button> submit </button> 
