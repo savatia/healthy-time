@@ -1,91 +1,12 @@
 <?php $this->load->view('includes/header'); ?>
-
-
-<style>
-.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
-  padding-right: 0;
-}
-
-#image {
-  background:url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg');
-}
-
-.mdl-layout__content > .page_content {
-  background: url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg') center / cover !important;
-}
-</style>
-
-<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--waterfall">
-    <!-- Top row, always visible -->
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Uliza HealthCare</span>
-      <div class="mdl-layout-spacer"></div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-        <label class="mdl-button mdl-js-button mdl-button--icon"
-               for="waterfall-exp">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-                 id="waterfall-exp">
-        </div>
-      </div>
-    </div>
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/home'; ?>">Home</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Uliza Menu</span>
-    <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/home'; ?>">Home</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
-    </nav>
-  </div>
-  <main class="mdl-layout__content" id="main">
-    <style>
-.mdl-tabs {
-	align-items: center;
-  justify-content: center;
-}
-.mdl-layout__content {
-	padding-top: 14px;
-	display:flex;
-	justify-content:center;
-}
-</style>
-
- <h2>Welcome!</h2>
- <h2>Welcome <?php //echo $username; ?>!</h2>
-   <a href="home/logout">Logout</a>
+  <?php $this->load->view('includes/top_bar')?>
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
       <a href="#login" class="mdl-tabs__tab is-active">Login</a>
       <a href="#signup" class="mdl-tabs__tab">Signup</a>
-  </div>
+  </div>	
 
-		
-
-<h1>Customer Login</h1>
-Please enter your username and password to log into the websites. If you do not have an account, you can get one for free by <a href="register.php">registering</a>.
 <p>
 <?php
 if(isset($_GET['error'])) {
@@ -121,8 +42,9 @@ echo "<strong>Incorrect username/password</strong>";
 			</div>
 			<div class="mdl-card__actions mdl-card--border">
 				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log in</button>
+ 
 			</div>
-		</div>
+             <a href =" login_signup.php" id="signup">Register</a>
 	</main>
 </div>
   </div>
@@ -167,23 +89,6 @@ echo "<strong>Incorrect username/password</strong>";
 
   </main>
 
-  <footer class="mdl-mini-footer">
-  <div class="mdl-mini-footer__left-section">
-    <div class="mdl-logo">
-      More Information
-    </div>
-    <ul class="mdl-mini-footer__link-list">
-      <li><a href="<?php echo base_url(); ?>">Home</a></li>
-      <li><a href="#">Privacy and Terms</a></li>
-      <li><a href="#">User Agreement</a></li>
-    </ul>
-  </div>
-  <div class="mdl-mini-footer__right-section">
-    <button class="mdl-mini-footer__social-btn"></button>
-    <button class="mdl-mini-footer__social-btn"></button>
-    <button class="mdl-mini-footer__social-btn"></button>
-  </div>
-</footer>
-</div>
+  <?php $this->load->view('includes/bottom_bar')?>
 
 <?php $this->load->view('includes/footer'); ?>
