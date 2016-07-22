@@ -71,7 +71,11 @@
 }
 </style>
 
+<<<<<<< HEAD:healthy-time/application/views/pages/login.php
  <h2>Welcome <?php echo $this->login_model->uname; ?>!</h2>
+=======
+ <h2>Welcome <?php //echo $username; ?>!</h2>
+>>>>>>> 02069db5f51bbe2a36ba7363c21c3f379901fc8b:healthy-time/application/views/pages/login_signup.php
    <a href="home/logout">Logout</a>
 
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -91,8 +95,13 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
+<<<<<<< HEAD:healthy-time/application/views/pages/login.php
   <!-- <?php echo validation_errors(); ?> -->
    <?php echo form_open('verifylogin'); ?>
+=======
+    <?php //echo validation_errors(); ?>
+    <?php echo form_open('verifylogin'); ?>
+>>>>>>> 02069db5f51bbe2a36ba7363c21c3f379901fc8b:healthy-time/application/views/pages/login_signup.php
    
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
