@@ -1,19 +1,22 @@
 <?php $this->load->view('includes/header'); ?>
-  <?php $this->load->view('includes/top_bar')?>
-
+<?php $this->load->view('includes/top_bar'); ?>
+<main class="mdl-layout__content" id="main">
+  <style>
+  .mdl-tabs {
+    align-items: center;
+    justify-content: center;
+  }
+  .mdl-layout__content {
+    padding-top: 14px;
+    display:flex;
+    justify-content:center;
+  }
+  </style>
 <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
   <div class="mdl-tabs__tab-bar">
       <a href="#login" class="mdl-tabs__tab is-active">Login</a>
       <a href="#signup" class="mdl-tabs__tab">Signup</a>
-  </div>	
-
-<p>
-<?php
-if(isset($_GET['error'])) {
-echo "<strong>Incorrect username/password</strong>";
-}
-?>
- <!--  // end test -->
+  </div>
   <?php 
   echo validation_errors(); 
   ?>
@@ -42,9 +45,8 @@ echo "<strong>Incorrect username/password</strong>";
 			</div>
 			<div class="mdl-card__actions mdl-card--border">
 				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Log in</button>
- 
 			</div>
-             <a href =" login_signup.php" id="signup">Register</a>
+		</div>
 	</main>
 </div>
   </div>
@@ -83,12 +85,9 @@ echo "<strong>Incorrect username/password</strong>";
 		</div>
 	</main>
 </div>
-  <?php
-    echo form_close();
-  ?>
-
-  </main>
-
-  <?php $this->load->view('includes/bottom_bar')?>
-
+<?php
+  echo form_close();
+?>
+</main>
+<?php $this->load->view('includes/bottom_bar'); ?>
 <?php $this->load->view('includes/footer'); ?>

@@ -40,7 +40,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
       </nav>
     </div>
@@ -52,19 +52,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
     </nav>
   </div>
-  <main class="mdl-layout__content" id="main">
-    <style>
-.mdl-tabs {
-	align-items: center;
-  justify-content: center;
-}
-.mdl-layout__content {
-	padding-top: 14px;
-	display:flex;
-	justify-content:center;
-}
-</style>
