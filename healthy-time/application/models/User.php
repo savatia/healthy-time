@@ -12,60 +12,67 @@ Class User extends CI_Model
     }
 
 
- function login($data)
- {
-     if(isset($data['phonenumber']) && isset($data['password']))
-     {
-         $phonenumber = $data['phonenumber'];
-         $password = $data['password'];
-     }
-     else
-     {
-         return false;
-     }
-    
-   $this->db->select('id, phonenumber, password');
-   $this->db->from('users');
-   $this->db->where('phonenumber', $phonenumber);
-   $this->db->where('password', MD5($password));
-   $this->db->limit(1);
-
-   $query = $this->db->get();
-
-   if($query -> num_rows() == 1)
-   {
-    foreach ($query->result() as $row)
+    function login($data)
     {
-        $id =  $row->id;
-        return $id;
-      }
-   }
-   else
-   {
-     return false;
-   }
- }
+        if(isset($data['phonenumber']) && isset($data['password']))
+        {
+            $phonenumber = $data['phonenumber'];
+            $password = $data['password'];
+        }
+        else
+        {
+            return false;
+        }
 
- function signup($email, $password)
- {
-  $this->email = $email;
-  $this->password = $password;
-  $this->uuid = $this->gen_uuid();
- }
+        $this->db->select('id, phonenumber, password');
+        $this->db->from('users');
+        $this->db->where('phonenumber', $phonenumber);
+        $this->db->where('password', MD5($password));
+        $this->db->limit(1);
 
- function save(){
-  $sql = "INSERT INTO users VALUES('".$this->uuid."', ".$this->db->escape($this->email).", '".MD5($this->password)."')";
-  $query = $this->db->query($sql);
+        $query = $this->db->get();
 
-  if($query)
-   {
-    return true;
-   }
-   else
-   {
-     return false;
-   }
- }
+        if($query -> num_rows() == 1)
+        {
+            foreach ($query->result() as $row)
+            {
+                $id =  $row->id;
+                return $phonenumber;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    function register($data)
+    {
+        if(isset($data['phonenumber']) && isset($data['password']))
+        {
+            $phonenumber = $data['phonenumber'];
+            $password = $data['password'];
+            $data['password'] = MD5($password);
+        }
+        if(isset($data['phonenumber']))
+        {
+            $phonenumber = $data['phonenumber'];
+        }
+        else
+        {
+            return false;
+        }
+
+        if($this->db->insert('users', $data))
+        {
+            return $phonenumber;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
  function gen_uuid() {
     return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',

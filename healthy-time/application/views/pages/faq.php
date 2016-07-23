@@ -1,4 +1,5 @@
 <?php $this->load->view('includes/header'); ?>
+<?php $this->load->view('includes/top_bar'); ?>
 
 <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
@@ -61,16 +62,5 @@
               </p>
           </div>
         </div>
-        <footer class="demo-footer mdl-mini-footer">
-          <div class="mdl-mini-footer--left-section">
-            <ul class="mdl-mini-footer--link-list">
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy and Terms</a></li>
-              <li><a href="#">User Agreement</a></li>
-            </ul>
-          </div>
-        </footer>
-      </main>
-    </div>
-
+    <?php $this->load->view('includes/bottom_bar'); ?>
     <?php $this->load->view('includes/footer'); ?>
