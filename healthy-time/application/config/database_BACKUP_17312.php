@@ -75,10 +75,17 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+<<<<<<< HEAD
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'healthy-time',
+=======
 	'hostname' => 'cpanel.vorane.com',
 	'username' => 'voraneco_adil',
 	'password' => '30111995',
 	'database' => 'voraneco_healthy-time',
+>>>>>>> master
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -1,7 +1,6 @@
 <?php
 
 class Application extends CI_Controller {
-
     public function __construct() {
         parent::__construct();
         // Load form helper library
@@ -13,6 +12,7 @@ class Application extends CI_Controller {
         // Load database
         $this->load->model('user');
     }
+
     public function index() {
         $data['title'] = 'Home';
         $this->load->view('pages/index', $data);
@@ -38,31 +38,27 @@ class Application extends CI_Controller {
         $this->load->view('pages/chat', $data);
     }
       public function Login() {
+        if($id =  $this->user->login($_POST) )
+       {
+         extract($_POST);
+         $this->session->set_userdata(array('uid' => $id ));
+         redirect('application/home', 'refresh');
+       }
+       else{
 
-// Check validation for user input in SignUp form
-          $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-          $this->form_validation->set_rules('email_value', 'Email', 'trim|required|xss_clean');
-          $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
-        $data['title'] = 'Login';
-        $this->load->view('pages/login', $data);
+          redirect('application/login', 'refresh');
+       }
     }
-      public function Registration() {
+      public function Register() {
         $data['title'] = 'Register';
         $this->load->view('pages/Register', $data);
     }
 
-    public function verifylogin(){
-        if($this->session->userdata('logged_in'))
-        {
-            $session_data = $this->session->userdata('logged_in');
-            $data['username'] = $session_data['username'];
-            $this->load->view('pages/index', $data);
-        }
-        else
-        {
-            //If no session, redirect to login page
-            $this->account();
-        }
+     public function verifylogin() {
+        $data['title'] = 'login';
+        $this->load->view('pages/Register', $data);
     }
-} 
+
+}
+ 
 ?>

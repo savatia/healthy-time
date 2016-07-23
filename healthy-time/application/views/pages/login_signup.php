@@ -42,7 +42,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
       </nav>
     </div>
@@ -54,7 +54,7 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'application/login'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
     </nav>
   </div>
@@ -91,8 +91,12 @@ echo "<strong>Incorrect username/password</strong>";
 }
 ?>
  <!--  // end test -->
-    <?php echo validation_errors(); ?>
-    <?php echo form_open('/application/verifylogin'); ?>
+  <?php 
+  echo validation_errors(); 
+  ?>
+  <?php
+  echo form_open('application/login');
+  ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
@@ -104,7 +108,7 @@ echo "<strong>Incorrect username/password</strong>";
 	  	<div class="mdl-card__supporting-text">
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" id="phonenumber" name="phonenumber" />
+						<input class="mdl-textfield__input" type="text" id="phonenumer" name="phonenumber" />
 						<label class="mdl-textfield__label" for="phonenumber">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
@@ -120,9 +124,11 @@ echo "<strong>Incorrect username/password</strong>";
 	</main>
 </div>
   </div>
-
-  <?php 
-
+  <?php
+    echo form_close();
+  ?>
+  <?php
+  echo form_open('application/register');
   ?>
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
@@ -134,16 +140,16 @@ echo "<strong>Incorrect username/password</strong>";
 	  	<div class="mdl-card__supporting-text">
 				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="text" id="username" />
-						<label class="mdl-textfield__label" for="username">PhoneNumber</label>
+						<input class="mdl-textfield__input" type="text" id="phonenumber" name="phonenumber" />
+						<label class="mdl-textfield__label" for="phonenumber">PhoneNumber</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Password</label>
+						<input class="mdl-textfield__input" type="password" id="password" name="password" />
+						<label class="mdl-textfield__label" for="password">Password</label>
 					</div>
 					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" type="password" id="userpass" />
-						<label class="mdl-textfield__label" for="userpass">Confirm Password</label>
+						<input class="mdl-textfield__input" type="password" id="confirm_password" />
+						<label class="mdl-textfield__label" for="confirm_password">Confirm Password</label>
 					</div>
 				</form>
 			</div>
@@ -153,6 +159,10 @@ echo "<strong>Incorrect username/password</strong>";
 		</div>
 	</main>
 </div>
+  <?php
+    echo form_close();
+  ?>
+
   </main>
 
   <footer class="mdl-mini-footer">
