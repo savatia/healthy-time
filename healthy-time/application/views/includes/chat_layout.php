@@ -78,7 +78,7 @@ EOD;
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-xs-9">
-                            <input type="text" placeholder="Enter your text" class="form-control chat-input">
+                            <input type="text" placeholder="Enter your text" id="message" class="form-control chat-input">
                         </div>
                         <div class="col-xs-3">
                             <button class="btn btn-primary btn-block" type="submit" id="sendButton">Send</button>
@@ -89,19 +89,6 @@ EOD;
         </div>
     </div>
 </div>
-
-
-<script>
-
-    $('.nano').nanoScroller();
-    $('#sendButton').on('click', function(event) {
-        event.preventDefault();
-
-        
-
-    })
-
-</script>
 
 
 
