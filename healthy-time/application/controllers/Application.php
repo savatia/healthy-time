@@ -25,5 +25,11 @@ class Application extends CI_Controller {
         $data['title'] = 'Chat With A Doctor';
         $this->load->view('pages/chat', $data);
     }
+
+    public function quiz() {
+        $data['quiz'] = 'Get Quizzed.';
+        $this->load->view('pages/quiz', $data);
+    }
+    
 } 
 ?>
