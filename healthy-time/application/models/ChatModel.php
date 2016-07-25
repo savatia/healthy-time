@@ -48,7 +48,7 @@ Class ChatModel extends CI_Model
     {
         if($uid = $this->session->userdata('uid'))
 		    return $uid;
-        return true;
+        return false;
     }  
 }
 ?>

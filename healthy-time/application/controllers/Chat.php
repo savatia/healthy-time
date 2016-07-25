@@ -22,11 +22,16 @@ class Chat extends CI_Controller {
         $user_id;
         if(!($user_id = $this->isLoggedIn()) )
         {
+            $this->load->view('pages/index');
             return;
         }
         $chat_id;
         $chat = $this->chatmodel->getCurrent();
-        
+        if($chat == null) {
+            $data['title'] = 'Pambana Healthcare';
+            $this->load->view('pages/index', $data);
+        }
+
         foreach ($chat as $row)
         {
             if(($chat_id = $row->id) == null)
@@ -70,7 +75,7 @@ class Chat extends CI_Controller {
     {
         if($uid = $this->session->userdata('uid'))
 		    return $uid;
-        return true;
+        return false;
     }  
 }
 
