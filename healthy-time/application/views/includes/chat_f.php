@@ -74,9 +74,10 @@ EOD;
         text-align: center;
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: 0x;
         height: 100px;
         width: 100%;
+        top: 0px;
     }
 
     body {

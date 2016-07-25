@@ -1,5 +1,5 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="http://localhost/healthy-time/healthy-time/application/assets/vendor/css/chat_layout.css" rel="stylesheet">
+<link href="<?php echo base_url() ?>/application/assets/vendor/css/chat_layout.css" rel="stylesheet">
 <div class="container">
     <div class="col-md-12 col-lg-6">
         <div class="panel">
