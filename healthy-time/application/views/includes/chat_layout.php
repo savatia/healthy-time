@@ -1,11 +1,10 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="http://localhost/healthy-time/healthy-time/application/assets/vendor/css/chat_layout.css" rel="stylesheet">
-
 <div class="container">
     <div class="col-md-12 col-lg-6">
         <div class="panel">
             <!--Heading-->
-            <!--<div class="panel-heading">
+            <div class="panel-heading">
                 <div class="panel-control">
                     <div class="btn-group">
                         <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#demo-chat-body"><i class="fa fa-chevron-down"></i></button>
@@ -19,7 +18,7 @@
                             <li><a id="demo-disconnect-chat" href="#" data-target="#demo-chat-body">Disconect</a></li>
                         </ul>
                     </div>
-                </div>-->
+                </div>
                 <h3 class="panel-title">Chat</h3>
             </div>
 
@@ -68,20 +67,16 @@ EOD;
                         ?>
                         </ul>
                     </div>
-                    <div class="nano-pane">
-                        <div class="nano-slider" style="height: 141px; transform: translate(0px, 0px);">
-                        </div>
-                    </div>
-                        </div>
+                    <div class="nano-pane"><div class="nano-slider" style="height: 141px; transform: translate(0px, 0px);"></div></div></div>
 
                 <!--Widget footer-->
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-xs-9">
-                            <input type="text" placeholder="Enter your text" id="message" class="form-control chat-input">
+                            <input type="text" placeholder="Enter your text" class="form-control chat-input">
                         </div>
                         <div class="col-xs-3">
-                            <button class="btn btn-primary btn-block" type="submit" id="sendButton">Send</button>
+                            <button class="btn btn-primary btn-block" type="submit">Send</button>
                         </div>
                     </div>
                 </div>
@@ -89,6 +84,3 @@ EOD;
         </div>
     </div>
 </div>
-
-
-

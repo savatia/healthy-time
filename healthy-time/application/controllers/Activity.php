@@ -32,4 +32,10 @@ class Activity extends CI_Controller {
         $data['title'] = 'Take a quiz';
         $this->load->view('pages/quiz', $data);
     }
+
+      public function Events()
+    {
+        $data['title'] = 'there are events you can attend. earn more pointd';
+        $this->load->view('pages/Events', $data);
+    }
 }

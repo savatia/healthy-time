@@ -40,6 +40,8 @@
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
+          <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Activities</a>
+        
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
         <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
       </nav>

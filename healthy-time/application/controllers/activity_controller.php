@@ -1,6 +1,6 @@
 <?php
 
-class Dashboard extends CI_Controller {
+class Activity extends CI_Controller {
     public function __construct() {
         parent::__construct();
         // Load form helper library
@@ -17,8 +17,24 @@ class Dashboard extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('pages/dashboard');
+
+    }
+    
+    public function chat()
+    {
+        $data['title'] = 'Chat With A Doctor';
+        $this->load->view('pages/chat', $data);
     }
 
+    public function quiz()
+    {
+        $data['title'] = 'Take a quiz';
+        $this->load->view('pages/quiz', $data);
+    }
 
+      public function Events()
+    {
+        $data['title'] = 'there are events you can attend. earn more pointd';
+        $this->load->view('pages/Events', $data);
+    }
 }
