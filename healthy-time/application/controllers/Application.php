@@ -70,4 +70,17 @@ class Application extends CI_Controller {
         $this->load->view('pages/faq', $data);
     }
 
+    public function Dashboard()
+    {
+        $data['title'] = 'you are home';
+        $this->load->view('pages/Dashboard', $data);
+    }
+
+       public function activities()
+    {
+        $data['title'] = 'your activities';
+        $this->load->view('pages/activities', $data);
+    }
+
+
 }
