@@ -177,3 +177,16 @@ body{
     -webkit-transition: all .7s;
     transition: all .7s;
 }
+
+.panel-title {
+    text-align: center;
+}
+
+#demo-chat-body > div.nano.has-scrollbar > div.nano-content.pad-all > ul {
+    list-style: none;
+}
+
+#sendButton {
+    width: 100%;
+    height: 40px;
+}

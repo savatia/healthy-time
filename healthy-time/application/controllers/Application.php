@@ -70,4 +70,30 @@ class Application extends CI_Controller {
         $this->load->view('pages/faq', $data);
     }
 
+    public function events()
+    {
+        $data['title'] = 'Events';
+        $this->load->view('pages/Events', $data);
+    }
+
+    public function pendingActivities()
+    {
+        $data['title'] = 'Pending Activities';
+        $this->load->view('pages/pending_activities', $data);
+    }
+
+
+    public function points()
+    {
+        $data['title'] = 'Points';
+        $this->load->view('pages/points', $data);
+    }
+
+    public function quiz()
+    {
+        $data['title'] = 'Quizes';
+        $this->load->view('pages/quiz', $data);
+    }
+
+
 }
