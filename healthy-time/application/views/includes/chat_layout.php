@@ -27,118 +27,44 @@
                 <div class="nano has-scrollbar" style="height:380px">
                     <div class="nano-content pad-all" tabindex="0" style="right: -17px;">
                         <ul class="list-unstyled media-block">
+                        <?php
+                        foreach($messages as $message)
+                        {   
+                            $uid = $this->session->userdata('uid');
+                            $avatar;
+                            $position;
+                            $formatting;
+                            $name;
+                            if($user_id == $message->user_id){
+                                $position = "media-right"; 
+                                $formatting = "speech-right";
+                                $avatar = 2;
+                                $name = "Me";
+                            }
+                            else{
+                                $position = "media-left";
+                                $formatting = "";
+                                $avatar = 1;
+                                $name = "John Doe";
+                            }
+                            echo <<<EOD
                             <li class="mar-btm">
-                                <div class="media-left">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
+                                <div class="$position">
+                                    <img src="http://bootdey.com/img/Content/avatar/avatar$avatar.png" class="img-circle img-sm" alt="Profile Picture">
                                 </div>
-                                <div class="media-body pad-hor">
+                                <div class="media-body pad-hor $formatting">
                                     <div class="speech">
-                                        <a href="#" class="media-heading">John Doe</a>
-                                        <p>Hello Lucy, how can I help you today ?</p>
+                                        <a href="#" class="media-heading">$name</a>
+                                        <p>$message->message </p>
                                         <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i>09:23AM
+                                            <i class="fa fa-clock-o fa-fw"></i>$message->created_at
                                         </p>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-right">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar2.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor speech-right">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">Lucy Doe</a>
-                                        <p>Hi, I want to buy a new shoes.</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:23AM
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-left">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">John Doe</a>
-                                        <p>Shipment is free. You\'ll get your shoes tomorrow!</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:25
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-right">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar2.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor speech-right">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">Lucy Doe</a>
-                                        <p>Wow, that\'s great!</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:27
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-right">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar2.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor speech-right">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">Lucy Doe</a>
-                                        <p>Ok. Thanks for the answer. Appreciated.</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:28
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-left">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">John Doe</a>
-                                        <p>You are welcome! <br> Is there anything else I can do for you today?</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:30
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-right">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar2.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor speech-right">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">Lucy Doe</a>
-                                        <p>Nope, That\'s it.</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:31
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="mar-btm">
-                                <div class="media-left">
-                                    <img src="http://bootdey.com/img/Content/avatar/avatar1.png" class="img-circle img-sm" alt="Profile Picture">
-                                </div>
-                                <div class="media-body pad-hor">
-                                    <div class="speech">
-                                        <a href="#" class="media-heading">John Doe</a>
-                                        <p>Thank you for contacting us today</p>
-                                        <p class="speech-time">
-                                            <i class="fa fa-clock-o fa-fw"></i> 09:32
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
+                            </li>                       
+EOD;
+                        }
+                        ?>
                         </ul>
                     </div>
                     <div class="nano-pane"><div class="nano-slider" style="height: 141px; transform: translate(0px, 0px);"></div></div></div>

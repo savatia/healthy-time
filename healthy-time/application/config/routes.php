@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'application';
 $route['activity'] = 'activity';
 $route['dashboard'] = 'dashboard';
+$route['chat'] = 'chat';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['verifylogin'] = 'home/index';

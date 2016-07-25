@@ -1,21 +1,9 @@
-<?php
-Class User extends CI_Model
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+if ( ! function_exists('UUID') )
 {
-    private $table = 'activities';
-
-    function select($data)
+    function UUID()
     {
-        $query = $this->db->get($this->table, $data);
-
-        return $query->result();
-    }
-
-    function insert($data)
-    {
-        $this->db->insert($this->table, $data);
-    }
-
-    function gen_uuid() {
         return sprintf( '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
             // 32 bits for "time_low"
             mt_rand( 0, 0xffff ), mt_rand( 0, 0xffff ),
@@ -37,4 +25,5 @@ Class User extends CI_Model
         );
     }
 }
+
 ?>
