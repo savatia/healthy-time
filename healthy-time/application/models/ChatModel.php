@@ -34,7 +34,17 @@ Class ChatModel extends CI_Model
         {
             return false;
         }
-        echo $user_id;
+        $this->db->where('`user_id` = \''.$user_id.'\' AND `started_at` > \''. date('Y-m-d H:i:s',time()  - (7 * 24 * 60 * 60 )) .'\'');
+        $this->db->from($this->table); 
+        $this->db->limit(1);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+
+    }
+
+    public function getCurrentFromID($user_id)
+    {
         $this->db->where('`user_id` = \''.$user_id.'\' AND `started_at` > \''. date('Y-m-d H:i:s',time()  - (7 * 24 * 60 * 60 )) .'\'');
         $this->db->from($this->table); 
         $this->db->limit(1);

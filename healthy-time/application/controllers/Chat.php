@@ -71,6 +71,39 @@ class Chat extends CI_Controller {
 
     }
 
+    public function smsreply()
+    {
+        $data['user_id'] = $_POST['from'];
+        $to = $_POST['to'];
+        $data['message'] = $_POST['text'];
+        $date = $_POST['date'];
+        $id = $_POST['id'];
+        $linkId = $_POST['linkId']; 
+
+        /* CHeck if the referer is from africasstalking gateway
+        if( $_SERVER['HTTP_REFERER'] != $something)
+        {
+
+        }
+        */
+        $chat_id;
+        $chat = $this->chatmodel->getCurrentFromID($from);
+
+        foreach ($chat as $row)
+        {
+            if(($chat_id = $row->id) == null)
+            {
+                echo 'No active chats!';
+                return;
+            }
+        }
+
+        $data['chat_id'] = $chat_id;
+        print_r($this->messagemodel->insert($data));
+
+    }
+
+
     private function isLoggedIn()
     {
         if($uid = $this->session->userdata('uid'))
