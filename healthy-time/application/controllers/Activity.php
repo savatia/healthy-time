@@ -17,7 +17,8 @@ class Activity extends CI_Controller {
 
     public function index()
     {
-
+        $data['title'] = 'Index';
+        $this->load->view('pages/index', $data);
     }
     
     public function chat()
