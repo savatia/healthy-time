@@ -13,6 +13,5 @@
         <?php $this->load->view('includes/chat_layout'); ?>
     </div>
   </main>
-
 <?php $this->load->view('includes/bottom_bar'); ?>
 <?php $this->load->view('includes/footer'); ?>

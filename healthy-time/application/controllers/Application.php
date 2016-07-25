@@ -69,6 +69,5 @@ class Application extends CI_Controller {
         $data['title'] = 'Frequently Asked Questions';
         $this->load->view('pages/faq', $data);
     }
+
 }
- 
-?>
