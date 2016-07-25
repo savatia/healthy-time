@@ -82,5 +82,10 @@ class Application extends CI_Controller {
         $this->load->view('pages/activities', $data);
     }
 
+      public function events()
+    {
+        $data['title'] = 'there are events you can attend. earn more pointd';
+        $this->load->view('pages/Events', $data);
+    }
 
 }

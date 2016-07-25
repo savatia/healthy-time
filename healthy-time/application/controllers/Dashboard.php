@@ -15,14 +15,14 @@ class Dashboard extends CI_Controller {
         $this->load->database();
     }
 
-    public function index()
+public function index()
     {
         if(!($data['phonenumber'] = $this->isLoggedIn()) )
         {
-            $this->load->view('pages/home');
+            $this->load->view('pages/index');
+            return;
         } 
         $user_details = $this->user->get($data);
-
         foreach ($user_details as $row) {
             $data['name'] = $row->name;
             $data['points'] = $row->points;
@@ -30,13 +30,13 @@ class Dashboard extends CI_Controller {
         }
         $this->load->view('pages/dashboard', $data);
     }
-
     private function isLoggedIn()
     {
         if($uid = $this->session->userdata('uid'))
-		    return $uid;
+            return $uid;
         return false;
     }  
+
 
 
 }
