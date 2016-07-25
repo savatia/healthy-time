@@ -90,7 +90,7 @@
         <header class="demo-drawer-header">
           <img src="images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
-            <span>hello@example.com</span>
+            <span><?php echo $phonenumber ;?></span>
             <div class="mdl-layout-spacer"></div>
             <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
               <i class="material-icons" role="presentation">arrow_drop_down</i>
@@ -161,10 +161,8 @@
     </h4>
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Go to Events
-    </a>
-    <div class="mdl-layout-spacer"></div>
+    <a href=" " class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Go to Events</a>
+    <div class="mdl-layout-spacer"> </div>
     <i class="material-icons">event</i>
   </div>
 </div><tspan font-size="0.2" dy="-0.07"></tspan></text>
@@ -175,7 +173,7 @@
 .demo-card-event.mdl-card {
   width: 256px;
   height: 256px;
-  background: #2ecc71;
+  background: #3E4EB8;
 }
 .demo-card-event > .mdl-card__actions {
   border-color: rgba(255, 255, 255, 0.2);
@@ -228,7 +226,7 @@
 .demo-card-event.mdl-card {
   width: 256px;
   height: 256px;
-  background: #f1c40f;
+  background: #3E4EB8;
 }
 .demo-card-event > .mdl-card__actions {
   border-color: rgba(255, 255, 255, 0.2);
@@ -263,9 +261,7 @@
     </h4>
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Lets chat
-    </a>
+    <a href="d<?php echo base_url() ?>chat" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> Lets chat</a>
     <div class="mdl-layout-spacer"></div>
     <i class="material-icons">Chat</i>
   </div>
