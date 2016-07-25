@@ -67,7 +67,7 @@ class Chat extends CI_Controller {
             return 'Not logged in!';
         }
         $_POST['chat_id'] = $chat_id;
-        print_r($this->messagemodel->insert($_POST));
+        echo json_encode($this->messagemodel->insert($_POST));
 
     }
 
