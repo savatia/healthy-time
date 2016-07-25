@@ -37,7 +37,7 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="<?php echo base_url() ?>/application/assets/img/favicon.png">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -47,7 +47,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.cyan-light_blue.min.css">
-    <link rel="stylesheet" href="http://localhost/healthy-time/healthy-time/application/assets/vendor/js/dashboard.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/application/assets/vendor/css/material.min.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>/application/assets/vendor/css/dashboard.css">
     <style>
     #view-source {
       position: fixed;
