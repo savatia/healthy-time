@@ -17,11 +17,6 @@ class Dashboard extends CI_Controller {
 
 public function index()
     {
-<<<<<<< HEAD
-        $this->load->view('pages/dashboard');
-    }
-
-=======
         if(!($data['phonenumber'] = $this->isLoggedIn()) )
         {
             $this->load->view('pages/index');
@@ -42,7 +37,6 @@ public function index()
         return false;
     }  
 
->>>>>>> caf5951ca4f22e41291711ddba40af8c8cb0bc01
 
 
 }

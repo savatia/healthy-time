@@ -2,9 +2,10 @@
 <?php $this->load->view('includes/top_bar'); ?>
 
   
-  <main class="mdl-layout__content" id="main">
-        <?php $this->load->view('includes/chat_f'); ?>
-  </main>
+<main class="mdl-layout__content" id="main">
+      <?php $this->load->view('includes/chat_f'); ?>
+</main>
   
+<?php $this->load->view('includes/chat_box'); ?>
 <?php $this->load->view('includes/bottom_bar'); ?>
 <?php $this->load->view('includes/footer'); ?>

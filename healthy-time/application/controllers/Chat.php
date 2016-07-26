@@ -49,6 +49,7 @@ class Chat extends CI_Controller {
 
     public function reply()
     {
+        extract($_POST);
         $chat_id;
         $chat = $this->chatmodel->getCurrent();
         

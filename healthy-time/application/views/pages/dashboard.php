@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Pending activities</title>
+    <title>Your dashboard</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -36,12 +36,8 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
-<<<<<<< HEAD
     <link rel="shortcut icon" href="images/favicon.png">
-=======
     <link rel="shortcut icon" href="<?php echo base_url() ?>/application/assets/img/favicon.png">
->>>>>>> caf5951ca4f22e41291711ddba40af8c8cb0bc01
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -51,12 +47,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.cyan-light_blue.min.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="styles.css">
-=======
     <link rel="stylesheet" href="<?php echo base_url() ?>/application/assets/vendor/css/material.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/application/assets/vendor/css/dashboard.css">
->>>>>>> caf5951ca4f22e41291711ddba40af8c8cb0bc01
+
     <style>
     #view-source {
       position: fixed;

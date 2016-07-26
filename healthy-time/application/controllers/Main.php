@@ -1,6 +1,6 @@
 <?php
 
-class Application extends CI_Controller {
+class Main extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->helper('form');
@@ -11,8 +11,19 @@ class Application extends CI_Controller {
     }
 
     public function index() {
-        $data['title'] = 'Home';
-        $this->load->view('pages/index', $data);
+        if(!($data['phonenumber'] = $this->isLoggedIn()) )
+        {
+            $this->load->view('pages/index');
+            return;
+        } 
+        $user_details = $this->user->get($data);
+        foreach ($user_details as $row) {
+            $data['name'] = $row->name;
+            $data['points'] = $row->points;
+            $data['title'] = 'Dashboard'; 
+            $data['role'] = $row->role;       
+        }
+        $this->load->view('pages/dashboard', $data);
     }
 
     public function home() {
@@ -23,11 +34,6 @@ class Application extends CI_Controller {
     public function account() {
         $data['title'] = 'Login | Signup';
         $this->load->view('pages/login_signup', $data);
-    }
-
-    public function chat() {
-        $data['title'] = 'Chat';
-        $this->load->view('pages/chat', $data);
     }
 
     public function health_facilities()
@@ -70,22 +76,14 @@ class Application extends CI_Controller {
         $this->load->view('pages/faq', $data);
     }
 
-    public function Dashboard()
-    {
-        $data['title'] = 'you are home';
-        $this->load->view('pages/Dashboard', $data);
+    public function logout(){
+        
     }
 
-       public function activities()
+    private function isLoggedIn()
     {
-        $data['title'] = 'your activities';
-        $this->load->view('pages/activities', $data);
-    }
-
-      public function events()
-    {
-        $data['title'] = 'there are events you can attend. earn more pointd';
-        $this->load->view('pages/Events', $data);
-    }
-
+        if($uid = $this->session->userdata('uid'))
+            return $uid;
+        return false;
+    }  
 }

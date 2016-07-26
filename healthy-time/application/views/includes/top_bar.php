@@ -36,25 +36,25 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/home'; ?>">Home</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-          <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Activities</a>
-        
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'home'; ?>">Home</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'dashboard'; ?>">Dashboard</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'activity'; ?>">Activities</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'prizes'; ?>">Prizes</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'health_facilities'; ?>">Health Facilities</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'faq'; ?>">FAQ</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'account'; ?>">Signup/Login</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Uliza Menu</span>
     <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/home'; ?>">Home</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/chat'; ?>">Chat</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/health_facilities'; ?>">Health Facilities</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/diagnosis'; ?>">Diagnosis</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/account'; ?>">Signup/Login</a>
-        <a class="mdl-navigation__link" href="<?php echo base_url().'application/faq'; ?>">FAQ</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'home'; ?>">Home</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'dashboard'; ?>">Dashboard</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'activity'; ?>">Activities</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'prizes'; ?>">Prizes</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'health_facilities'; ?>">Health Facilities</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'faq'; ?>">FAQ</a>
+        <a class="mdl-navigation__link" href="<?php echo base_url().'account'; ?>">Signup/Login</a>
     </nav>
   </div>
