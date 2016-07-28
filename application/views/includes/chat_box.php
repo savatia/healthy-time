@@ -35,7 +35,7 @@
 
 <?php ?>
 
-<script src="<?php echo base_url() ?>/application/assets/vendor/js/jquery.min.js" /> </script>
+<script src="<?php echo base_url() ?>application/assets/vendor/js/jquery.min.js" /> </script>
 <script async defer>
     $('footer').hide();
     $('#chat_form').on('submit', function(event) {

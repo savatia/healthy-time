@@ -4,11 +4,11 @@
 }
 
 #image {
-  background:url('<?php echo base_url() ?>/application/assets/img/home.jpg');
+  background:url('<?php echo base_url() ?>application/assets/img/home.jpg');
 }
 
 .mdl-layout__content > .page_content {
-  background: url('<?php echo base_url() ?>/application/assets/img/home.jpg') center / cover !important;
+  background: url('<?php echo base_url() ?>application/assets/img/home.jpg') center / cover !important;
 }
 </style>
 

@@ -4,7 +4,7 @@
       More Information
     </div>
     <ul class="mdl-mini-footer__link-list">
-      <li><a href="<?php echo base_url(); ?>">Home</a></li>
+      <li><a href="<?php echo base_url();?>">Home</a></li>
       <li><a href="#">Privacy and Terms</a></li>
       <li><a href="#">User Agreement</a></li>
     </ul>
