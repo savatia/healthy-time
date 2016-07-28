@@ -11,7 +11,7 @@ class Chat extends CI_Controller {
         $this->load->library('session');
         // Load database
         $this->load->model('user');
-        //$this->load->model('chatmodel');
+        $this->load->model('chatModel');
         $this->load->model('messagemodel');
         // Load database
         $this->load->database();
