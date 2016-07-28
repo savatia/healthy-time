@@ -1,5 +1,5 @@
 <div class="chat_box">
-    <form id='chat_form' action='<?php echo base_url(); ?>chat/reply' method='post'>
+    <form id='chat_form' action='/chat/reply' method='post'>
     <div class="mdl-textfield mdl-js-textfield">
         <input class="mdl-textfield__input" type="text" id="message" name="message">
         <label class="mdl-textfield__label" for="message">Message...</label>
@@ -35,7 +35,7 @@
 
 <?php ?>
 
-<script src="<?php echo base_url() ?>application/assets/vendor/js/jquery.min.js" /> </script>
+<script src="/application/assets/vendor/js/jquery.min.js" /> </script>
 <script async defer>
     $('footer').hide();
     $('#chat_form').on('submit', function(event) {
@@ -43,7 +43,7 @@
 
         $.ajax({
             method: 'POST',
-            url: "<?php echo base_url()."chat/reply/"; ?>",
+            url: "/chat/reply/"; ?>",
             data:"message="+ $("#message").val(),
 
             success: function(data) {
