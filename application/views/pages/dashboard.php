@@ -34,7 +34,7 @@
     <link rel="apple-touch-icon-precomposed" href="/application/assets/img/ios-desktop.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="/application/assets/img/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
     <link rel="shortcut icon" href="/application/assets/img/favicon.png">
     <link rel="shortcut icon" href="/application/assets/img/favicon.png">
@@ -90,7 +90,7 @@
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
-          <img src="images/user.jpg" class="demo-avatar">
+          <img src="application/assets/img/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span><?php echo $phonenumber ;?></span>
             <div class="mdl-layout-spacer"></div>
