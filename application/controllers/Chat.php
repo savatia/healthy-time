@@ -81,12 +81,12 @@ class Chat extends CI_Controller {
         $id = $_POST['id'];
         $linkId = $_POST['linkId']; 
 
-        /* CHeck if the referer is from africasstalking gateway
+         echo $_SERVER['HTTP_REFERER'];
         if( $_SERVER['HTTP_REFERER'] != $something)
         {
 
         }
-        */
+
         $chat_id;
         $chat = $this->chatmodel->getCurrentFromID($from);
 
