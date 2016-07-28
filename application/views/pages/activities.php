@@ -8,11 +8,11 @@
 }
 
 #image {
-  background:url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg');
+  background:url('/application/assets/img/home.jpg');
 }
 
 .mdl-layout__content > .page_content {
-  background: url('http://localhost/healthy-time/healthy-time/application/assets/img/home.jpg') center / cover !important;
+  background: url('/application/assets/img/home.jpg') center / cover !important;
 }
 </style>
 

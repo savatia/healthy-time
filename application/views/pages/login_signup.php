@@ -20,10 +20,8 @@
   <?php 
   echo validation_errors(); 
   ?>
-  <?php
-  echo form_open('/login');
-  ?>
-   
+<form action="/login" method="post" accept-charset="utf-8">
+
   <div class="mdl-tabs__panel is-active" id="login">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
 	<main class="mdl-layout__content">
@@ -53,9 +51,8 @@
   <?php
     echo form_close();
   ?>
-  <?php
-  echo form_open('/register');
-  ?>
+<form action="/register" method="post" accept-charset="utf-8">
+
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
 	<main class="mdl-layout__content">
