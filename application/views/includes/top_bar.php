@@ -42,7 +42,7 @@
         <a class="mdl-navigation__link" href="/prizes">Prizes</a>
         <a class="mdl-navigation__link" href="/health_facilities">Health Facilities</a>
         <a class="mdl-navigation__link" href="/faq">FAQ</a>
-        <a class="mdl-navigation__link" href="/account'">Signup/Login</a>
+        <a class="mdl-navigation__link" href="/account">Signup/Login</a>
       </nav>
     </div>
   </header>
