@@ -48,11 +48,11 @@ class Main extends CI_Controller {
         {
             extract($_POST);
             $this->session->set_userdata(array('uid' => $id ));
-            redirect('application/home', 'refresh');
+            redirect('/dashboard', 'refresh');
         }
         else
         {
-            redirect('application/account#login', 'refresh');
+            redirect('/account#login', 'refresh');
         }
     }
 
@@ -62,11 +62,11 @@ class Main extends CI_Controller {
         {
             extract($_POST);
             $this->session->set_userdata(array('uid' => $phonenumber ));
-            redirect('application/home', 'refresh');
+            redirect('/home', 'refresh');
         }
         else
         {
-            redirect('application/account#signup', 'refresh');
+            redirect('/account#signup', 'refresh');
         }
     }
 
@@ -77,7 +77,7 @@ class Main extends CI_Controller {
     }
 
     public function logout(){
-        
+
     }
 
     private function isLoggedIn()

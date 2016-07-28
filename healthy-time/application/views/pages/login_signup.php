@@ -21,7 +21,7 @@
   echo validation_errors(); 
   ?>
   <?php
-  echo form_open('application/login');
+  echo form_open('/login');
   ?>
    
   <div class="mdl-tabs__panel is-active" id="login">
@@ -54,7 +54,7 @@
     echo form_close();
   ?>
   <?php
-  echo form_open('application/register');
+  echo form_open('/register');
   ?>
   <div class="mdl-tabs__panel" id="signup">
     <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
